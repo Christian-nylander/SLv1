@@ -1,0 +1,121 @@
+body {
+  background-color: #FAFBFC;
+}
+
+.register-container {
+  width: 700px;
+  height: 440px;
+  background-color: #FFFFFF;
+  margin: 0px auto;
+  margin-top: 22vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+}
+
+.register-left-child {
+  width: 40%;
+  height: 440px;
+  background-image: linear-gradient(to bottom right, #66BFD1, #1080BF);
+  display: flex;
+  flex-direction: column;
+}
+
+.register-right-child {
+  width: 60%;
+  height: 440px;
+  background-color: #FFFFFF;
+}
+
+.first-topic {
+  font-size: 20px;
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 120px !important;
+}
+
+.second-topic {
+  font-size: 14px;
+  color: #FAFAFA;
+  text-align: center;
+  font-weight: bold;
+  width: 75%;
+  margin: 0px auto;
+  margin-top: 20px;
+}
+
+.to-login-btn {
+  width: 160px;
+  height: 40px;
+  background-color: rgba(0,0,0,0);
+  border: 1px solid #FFF;
+  color: #FFF;
+  margin: 0px auto !important;
+  margin-top: 40px !important;
+}
+
+.to-login-btn:hover {
+  cursor: pointer;
+  background-color: #006aa3;
+  -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+.first-topic-2 {
+  font-size: 24px;
+  color: #333333;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 30px !important;
+}
+
+.login-boxes-container {
+  width: 160px;
+  height: 40px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-box {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.or {
+  color: #333333;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.input-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.reg-input {
+  margin-top: 20px;
+}
+
+.first-btn {
+  width: 180px;
+  margin-top: 10px !important;
+}
+
+.link-container-register {
+  margin: 0px auto;
+}
+
+.loader {
+  color: yellow !important;
+}
