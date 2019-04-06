@@ -31,7 +31,7 @@ body {
   color: #FFFFFF;
   text-align: center;
   font-weight: bold;
-  margin-top: 120px !important;
+  margin-top: 110px !important;
 }
 
 .second-topic {
@@ -118,4 +118,10 @@ body {
 
 .loader {
   color: yellow !important;
+}
+
+.error-text {
+  color: red;
+  margin-top: 10px;
+  font-size: 12px;
 }

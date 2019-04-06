@@ -2,16 +2,38 @@ import React, { Component } from 'react';
 import '../../App.css';
 import { Input, Button, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 class Register extends Component {
   state = {
     username: '',
     email: '',
     password: '',
+    errorMessage: ''
   }
 
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
+  }
+
+  register = () => {
+    this.setState({errorMessage: ''});
+    if(this.state.email && this.state.password && this.state.username) {
+      const go = this;
+      axios.post('http://localhost:3000/api/Users', {
+        username: this.state.username,
+        email: this.state.email,
+        password: this.state.password,
+      })
+      .then(function (response) {
+        console.log("SUCCESS")
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    } else {
+      this.setState({errorMessage: 'One or more fields are empty'});
+    }
   }
 
   render() {
@@ -33,8 +55,9 @@ class Register extends Component {
           <div className="input-container">
             <Input name="username" className="reg-input" icon='user' iconPosition='left' placeholder='Username...' value={this.state.username} onChange={this.handleChange}/>
             <Input name="email" className="reg-input" icon='mail' iconPosition='left' placeholder='Email...' value={this.state.email} onChange={this.handleChange}/>
-            <Input name="password" className="reg-input" icon='key' iconPosition='left' placeholder='Password...' value={this.state.password} onChange={this.handleChange}/>
-            <Button className="first-btn" primary>Create account</Button>
+            <Input name="password" type="password" className="reg-input" icon='key' iconPosition='left' placeholder='Password...' value={this.state.password} onChange={this.handleChange}/>
+            <Button className="first-btn" primary onClick={this.register}>Create account</Button>
+            <p className="error-text">{this.state.errorMessage}</p>
           </div>
         </div>
       </div>
