@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import '../../App.css';
 
-class Home extends Component {
+class CreateList extends Component {
   render() {
     return (
-      <div className="main-container">
+      <div className="home-container">
 
       </div>
     );
   }
 }
 
-export default Home;
+export default CreateList;

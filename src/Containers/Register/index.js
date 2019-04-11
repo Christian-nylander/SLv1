@@ -3,6 +3,7 @@ import '../../App.css';
 import { Input, Button, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import history from '../../history';
 
 class Register extends Component {
   state = {
@@ -19,14 +20,13 @@ class Register extends Component {
   register = () => {
     this.setState({errorMessage: ''});
     if(this.state.email && this.state.password && this.state.username) {
-      const go = this;
       axios.post('http://localhost:3000/api/Users', {
         username: this.state.username,
         email: this.state.email,
         password: this.state.password,
       })
       .then(function (response) {
-        console.log("SUCCESS")
+        history.push('/');
       })
       .catch(function (error) {
         console.log(error);
@@ -38,6 +38,7 @@ class Register extends Component {
 
   render() {
     return (
+      <div>
       <div className="register-container">
         <div className="register-left-child">
           <p className="first-topic">Already a member?</p>
@@ -45,7 +46,7 @@ class Register extends Component {
           <Link className="link-container-register" to="/login"><Button inverted className="to-login-btn">LOGIN</Button></Link>
         </div>
         <div className="register-right-child">
-          <p className="first-topic-2">CREATE ACCOUNT</p>
+          <p id="mobile-topic-2" className="first-topic-2">CREATE ACCOUNT</p>
           <div className="login-boxes-container">
             <div className="login-box"><Icon disabled name='facebook' size='big' /></div>
             <div className="login-box"><Icon disabled name='twitter square' size='big'/></div>
@@ -60,6 +61,10 @@ class Register extends Component {
             <p className="error-text">{this.state.errorMessage}</p>
           </div>
         </div>
+      </div>
+      <div className="create-account-box">
+        <Link className="link-container-register" to="/login"><p className="create-account-text">BACK TO LOGIN</p></Link>
+      </div>
       </div>
     );
   }

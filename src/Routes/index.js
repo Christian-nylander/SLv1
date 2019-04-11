@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
+import { Router, Route, Redirect, Switch } from 'react-router-dom';
 import Home from '../Containers/Home';
 import Login from '../Containers/Login';
 import Register from '../Containers/Register';
+import history from "../history";
+import Menu from '../Containers/Menu';
+import MobileMenu from '../Containers/MobileMenu';
+import NewList from '../Containers/NewList';
+import CreateList from '../Containers/CreateList';
+import '../App.css';
 
 const PrivateRoute = ({component: Component, authenticated, ...rest}) => {
   return (
@@ -54,14 +60,18 @@ class Routes extends Component {
       return null;
     }
     return (
-        <Router>
+        <Router history={history}>
           <div>
+            <Menu authenticated={this.state.authenticated}/>
             <Switch>
               <PrivateRoute exact path='/' component={Home} authenticated={this.state.authenticated} />
+              <PrivateRoute exact path='/newlist' component={NewList} authenticated={this.state.authenticated} />
+              <PrivateRoute exact path='/createList' component={CreateList} authenticated={this.state.authenticated} />
               <PublicRoute exact path='/login' component={Login} authenticated={this.state.authenticated} logIn={this.logIn} />
               <PublicRoute exact path='/register' component={Register} authenticated={this.state.authenticated} logIn={this.logIn} />
               <Route path='*' render={() => <Redirect to='/' />} />
             </Switch>
+            <MobileMenu className="mobileMenu" authenticated={this.state.authenticated}/>
           </div>
         </Router>
     );

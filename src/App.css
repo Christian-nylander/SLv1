@@ -23,7 +23,6 @@ body {
 .register-right-child {
   width: 60%;
   height: 440px;
-  background-color: #FFFFFF;
 }
 
 .first-topic {
@@ -68,6 +67,10 @@ body {
   color: #333333;
   text-align: center;
   font-weight: bold;
+  margin-top: 60px !important;
+}
+
+#mobile-topic-2 {
   margin-top: 30px !important;
 }
 
@@ -110,6 +113,7 @@ body {
 .first-btn {
   width: 180px;
   margin-top: 10px !important;
+  height: 40px !important;
 }
 
 .link-container-register {
@@ -124,4 +128,110 @@ body {
   color: red;
   margin-top: 10px;
   font-size: 12px;
+}
+
+.sign-out-btn {
+  position: absolute;
+  right: 10px;
+  top: 3px;
+}
+
+.sign-out-btn:hover {
+  background-color: gray;
+}
+
+.loader-btn {
+  margin-top: -2px !important;
+}
+
+.home-container {
+  width: 98%;
+  height: 92vh;
+  margin: 0px auto;
+  margin-top: 2vh;
+}
+
+.newlist-container {
+  width: 800px;
+  margin: 0px auto !important;
+  margin-top: 20vh !important;
+}
+
+.add-product-input {
+  margin-top: 200px !important;
+}
+
+.shoppinglist-box:hover .add-shoppinglist-icon{
+  cursor: pointer;
+  color: #00AEEF;
+}
+
+.shoppinglist-box: {
+  padding: 300px !important;
+}
+
+.create-account-text {
+  text-align: center;
+  padding-top: 12px;
+  font-weight: bold;
+  font-size: 11px;
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 730px) {
+  .create-account-box {
+    display: none;
+  }
+  .create-account-text {
+    display: none;
+  }
+
+}
+@media screen and (max-width: 730px) {
+  .register-left-child {
+    display: none;
+    width: 400px;
+  }
+  .newlist-container {
+    width: 80%;
+  }
+  .register-container {
+    width: 300px;
+    margin-top: 18vh;
+  }
+  .register-right-child {
+    margin: 0px auto;
+  }
+  .first-topic-2 {
+    margin-top: 50px !important;
+  }
+  #mobile-topic-2 {
+    font-size: 20px;
+  }
+  .create-account-box {
+    width: 300px;
+    height: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #FFFFFF;
+    margin: 0px auto;
+    background-color: #248FC3;
+    margin-top: 2vh;
+  }
+  .create-account-box:hover {
+    cursor: pointer;
+    background-color: #65BED1;
+  }
+}
+
+@media screen and (min-width: 517px) {
+  .mobileMenu {
+    display: none !important;
+    position: absolute !important;
+    bottom: 0 !important;
+  }
+}
+@media screen and (max-width: 517px) {
+  .webMenu {
+    display: none !important;
+  }
 }

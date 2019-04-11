@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import '../../App.css';
 
-class Home extends Component {
+class NewList extends Component {
+
   render() {
     return (
-      <div className="main-container">
-
-      </div>
+      <div className="main-container"></div>
     );
   }
 }
 
-export default Home;
+export default NewList;
