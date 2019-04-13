@@ -5,9 +5,9 @@ import Login from '../Containers/Login';
 import Register from '../Containers/Register';
 import history from "../history";
 import Menu from '../Containers/Menu';
-import NewList from '../Containers/NewList';
 import CreateList from '../Containers/CreateList';
 import MobileMenu from '../Containers/MobileMenu';
+import Planer from '../Containers/Planer';
 import '../App.css';
 
 const PrivateRoute = ({component: Component, authenticated, ...rest}) => {
@@ -65,8 +65,8 @@ class Routes extends Component {
             <Menu authenticated={this.state.authenticated}/>
             <Switch>
               <PrivateRoute exact path='/' component={Home} authenticated={this.state.authenticated} />
-              <PrivateRoute exact path='/newlist' component={NewList} authenticated={this.state.authenticated} />
               <PrivateRoute exact path='/createList' component={CreateList} authenticated={this.state.authenticated} />
+              <PrivateRoute exact path='/planer' component={Planer} authenticated={this.state.authenticated}/>
               <PublicRoute exact path='/login' component={Login} authenticated={this.state.authenticated} logIn={this.logIn} />
               <PublicRoute exact path='/register' component={Register} authenticated={this.state.authenticated} logIn={this.logIn} />
               <Route path='*' render={() => <Redirect to='/' />} />

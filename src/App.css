@@ -189,6 +189,7 @@ body {
   bottom: 0px;
   display: flex;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 9;
 }
 
 .mobile-btn-nav {
@@ -211,10 +212,11 @@ body {
   border-bottom: 1px solid rgba(0,0,0,0.20);
   display: flex;
   position: fixed;
+  z-index: 10;
 }
 
 .banner-child {
-  width: 30%;
+  width: 33.3%;
   height: 44px;
 }
 
@@ -279,6 +281,31 @@ body {
   color: #464c51;
   top: 14px;
 }
+
+.main-window-component {
+  width: 73%;
+  height: 90vh;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  margin-top: 6vh;
+  z-index: 1;
+}
+
+.top-planer-container {
+  height: 100px;
+  width: 80%;
+  margin: 0px auto;
+}
+
+.bottom-planer-container {
+  height: 100px;
+  width: 80%;
+  margin: 0px auto;
+  margin-top: 40px;
+}
 @media screen and (min-width: 730px) {
   .create-account-box {
     display: none;
@@ -303,11 +330,19 @@ body {
   #align-middle-navigation {
     width: 60%;
   }
+  .main-window-component {
+    width: 94%;
+  }
 }
 
 @media screen and (max-width: 730px) {
   .banner {
     height: 54px;
+  }
+  .main-window-component {
+    width: 94%;
+    margin-top: 7vh;
+    height: 10000px;
   }
   .profile-name {
     display: none;
