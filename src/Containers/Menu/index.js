@@ -1,31 +1,29 @@
 import React, { Component } from 'react'
 import { Icon } from 'semantic-ui-react'
+import Logo from '../../Images/logo.png';
 
 export default class MenuExampleIcons extends Component {
   render() {
 
     if(this.props.authenticated) {
       return (
-        <div>
-          <div id="menu1" className="banner">
-            <div className="inner-banner">
-              <p className="logo-contianer">LOGO</p>
-            </div>
-            <div id="menu2" className="inner-banner-middle">
-              <div className="nav-box"><Icon className="nav-icon" name='home' /><p className="nav-links">Home</p></div>
-              <div className="nav-box"><Icon className="nav-icon" name='list' /><p className="nav-links">List</p></div>
-              <div className="nav-box"><Icon className="nav-icon" name='table' /><p className="nav-links">Kanban</p></div>
-              <div className="nav-box"><Icon className="nav-icon" name='info circle' /><p className="nav-links">About</p></div>
-              <div className="nav-box"><Icon className="nav-icon" name='setting' /><p className="nav-links">Settings</p></div>
-            </div>
-            <div id="menu3" className="inner-banner">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGUsug5321YpgmyZBfyowM1WmwCglTJ0czWogvCz65tyw7NSoj" className="profile-image" alt="img"/>
-              <p className="profile-name">Tester</p>
-              <Icon className="icon-arrow-down" name="angle down" />
-            </div>
+        <div className="banner">
+          <div id="align-first-navigation" className="banner-child">
+            <img src={Logo} className="logo" alt="logo" /><p className="banner-name">List <span className="color-word">Planer</span></p>
           </div>
-          <div className="banner-child">
-
+          <div id="align-middle-navigation" className="banner-child">
+            <p className="nav-text">Home</p>
+            <p className="nav-text">Planer</p>
+            <p className="nav-text">Kamban</p>
+            <p className="nav-text">Settings</p>
+            <p className="nav-text">About</p>
+            <p className="nav-text"></p>
+            <p className="nav-text"></p>
+          </div>
+          <div id="align-middle-third" className="banner-child">
+            <img src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640-300x300.png" className="user-profile-navbar" alt="none"/>
+            <p className="profile-name">Test User</p>
+            <Icon className="bars-icon" name='bars' size="big" />
           </div>
         </div>
       )
