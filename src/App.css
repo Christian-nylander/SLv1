@@ -210,6 +210,7 @@ body {
   background-color: #FFFFFF;
   border-bottom: 1px solid rgba(0,0,0,0.20);
   display: flex;
+  position: fixed;
 }
 
 .banner-child {
@@ -236,8 +237,13 @@ body {
   margin-top: 14px !important;
 }
 
+.nav-text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .user-profile-navbar {
-  width: 30px;
+  width: 24px;
   border-radius: 100%;
   border: 2px solid #d5dce2;
 }
@@ -246,6 +252,7 @@ body {
   font-family: 'Work Sans', sans-serif;
   margin-left: 4px;
   margin-top: 14px;
+  font-size: 12px;
 }
 
 #align-middle-third {
@@ -268,8 +275,9 @@ body {
 .bars-icon {
   width: 34px !important;
   position: absolute !important;
-  right: 10px;
+  right: 14px;
   color: #464c51;
+  top: 14px;
 }
 @media screen and (min-width: 730px) {
   .create-account-box {
@@ -298,6 +306,9 @@ body {
 }
 
 @media screen and (max-width: 730px) {
+  .banner {
+    height: 54px;
+  }
   .profile-name {
     display: none;
   }
@@ -306,9 +317,11 @@ body {
   }
   .banner-name {
     font-size: 16px;
+    margin-top: 14px;
   }
   .logo {
     width: 28px;
+    margin-top: 6px;
   }
   #align-middle-third {
     width: 40%;
