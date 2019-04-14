@@ -306,6 +306,16 @@ body {
   margin: 0px auto;
   margin-top: 40px;
 }
+
+.table-list{
+  width: 50% !important;
+  margin: 0px auto !important;
+  margin-bottom: 10px !important;
+}
+
+.btn-check {
+  color: green !important
+}
 @media screen and (min-width: 730px) {
   .create-account-box {
     display: none;
@@ -336,6 +346,10 @@ body {
 }
 
 @media screen and (max-width: 730px) {
+  .table-list{
+    width: 90% !important;
+    margin: 0px auto !important;
+  }
   .banner {
     height: 54px;
   }
