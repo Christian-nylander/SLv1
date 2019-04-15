@@ -20,8 +20,8 @@ class Register extends Component {
   register = () => {
     this.setState({errorMessage: ''});
     if(this.state.email && this.state.password && this.state.username) {
-      axios.post('http://localhost:3000/api/Users', {
-        username: this.state.username,
+      axios.post('http://localhost:3000/api/users', {
+        name: this.state.username,
         email: this.state.email,
         password: this.state.password,
       })

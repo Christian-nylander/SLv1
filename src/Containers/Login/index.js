@@ -21,18 +21,17 @@ class Login extends Component {
     if(this.state.email && this.state.password) {
       const go = this;
       go.setState({loginbtn: <Loader className="loader-btn" active inline size='small'/>})
-      axios.post('http://localhost:3000/api/Users/login', {
+      axios.post('http://localhost:3000/api/auth', {
         email: this.state.email,
         password: this.state.password
       })
       .then(function (response) {
-        localStorage.setItem("token", response.data.id);
+        localStorage.setItem("token", response.data);
         window.location.reload()
       })
       .catch(function (error) {
         console.log(error);
-        localStorage.setItem("token", "kalle");
-        window.location.reload()
+        go.setState({errorMessage: 'Incorrect username or password', loginbtn: 'LOGIN'})
       });
     } else {
       this.setState({errorMessage: 'One or more fields are empty', loginbtn: 'LOGIN'});

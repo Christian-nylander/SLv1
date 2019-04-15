@@ -313,8 +313,25 @@ body {
   margin-bottom: 10px !important;
 }
 
-.btn-check {
-  color: green !important
+.list-container {
+  width: 100%;
+}
+
+.line-left {
+  text-align: left;
+}
+
+.topic-create-list {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400px;
+  padding-top: 14px;
+  margin-bottom: -20px;
+}
+
+.add-to-cart-input {
+  padding-top: 0px !important;
 }
 @media screen and (min-width: 730px) {
   .create-account-box {
