@@ -36,7 +36,7 @@ class Planer extends Component {
   render() {
     const allList = this.state.allList.map((inData, index) => {
       return(
-      <Card key={index}>
+      <Card key={index} className="card-container">
         <Card.Content>
           <Image floated='right' size='mini' src='https://react.semantic-ui.com/images/avatar/large/steve.jpg'/>
           <Card.Header className="line-left">{inData.name}</Card.Header>
@@ -48,10 +48,10 @@ class Planer extends Component {
         </Card.Content>
         <Card.Content>
           <div className='ui two buttons'>
-            <Button color='green'>
+            <Button>
               Open
             </Button>
-            <Button color='red'>
+            <Button>
               Delete
             </Button>
           </div>
@@ -61,15 +61,7 @@ class Planer extends Component {
     })
     return (
       <div className="main-window-component">
-      <div className="top-planer-container">
-        <Divider horizontal>
-           <Header as='h4'>
-             <Icon name='bar chart' />
-             Settings
-           </Header>
-         </Divider>
          <CreateNewList update={this.getLists}/>
-      </div>
         <div className="bottom-planer-container">
           <Divider horizontal>
              <Header as='h4'>

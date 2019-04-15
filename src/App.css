@@ -283,7 +283,7 @@ body {
 }
 
 .main-window-component {
-  width: 73%;
+  width: 1200px;
   height: 90vh;
   position: absolute;
   margin-left: auto;
@@ -333,6 +333,12 @@ body {
 .add-to-cart-input {
   padding-top: 0px !important;
 }
+
+.card-container {
+  width: 310px !important
+}
+
+
 @media screen and (min-width: 730px) {
   .create-account-box {
     display: none;
@@ -358,11 +364,57 @@ body {
     width: 60%;
   }
   .main-window-component {
-    width: 94%;
+    width: 1100px;
+  }
+  .card-container {
+    width: 284px !important
+  }
+}
+@media screen and (max-width: 1100px) {
+  #align-middle-third {
+    width: 20%;
+  }
+  #align-first-navigation {
+    width: 20%;
+  }
+  #align-middle-navigation {
+    width: 60%;
+  }
+  .main-window-component {
+    width: 100%;
+  }
+  .card-container {
+    width: 44% !important;
   }
 }
 
 @media screen and (max-width: 730px) {
+  .new-list-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: none;
+    position: fixed;
+    right: 10px;
+    bottom: 60px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 10000000;
+  }
+
+  .new-list-btn:hover {
+    cursor: pointer;
+    background-color: #F6F8FA;
+  }
+
+  .add-icon {
+    color: #119ADF !important;
+    margin-left: 3px !important;
+    margin-top: 1px !important;
+  }
+  .card-container {
+    width: 100% !important;
+  }
   .table-list{
     width: 90% !important;
     margin: 0px auto !important;
@@ -373,7 +425,6 @@ body {
   .main-window-component {
     width: 94%;
     margin-top: 7vh;
-    height: 10000px;
   }
   .profile-name {
     display: none;

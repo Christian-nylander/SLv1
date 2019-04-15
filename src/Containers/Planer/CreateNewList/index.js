@@ -125,7 +125,7 @@ class Planer extends Component {
     })
     return (
           <div>
-          <Button primary onClick={this.show('blurring')}>Create new list</Button>
+          <button onClick={this.show('blurring')} className="new-list-btn"><Icon name="plus" className="add-icon"/></button>
           <Modal dimmer={dimmer} open={open} onClose={this.close}>
           <p className="topic-create-list">Create new list</p>
           <Segment basic textAlign='center'>
