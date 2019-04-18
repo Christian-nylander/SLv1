@@ -48,12 +48,11 @@ class Planer extends Component {
         </Card.Content>
         <Card.Content>
           <div className='ui two buttons'>
-            <Button>
-              Open
-            </Button>
-            <Button>
-              Delete
-            </Button>
+            <Button.Group basic size='small'className="btn-group-container">
+              <Button icon='add user' />
+              <Button icon='settings' />
+              <Button icon='delete' />
+            </Button.Group>
           </div>
         </Card.Content>
       </Card>
